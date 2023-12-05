@@ -1,0 +1,186 @@
+/* * {
+    outline: solid 1px tomato;
+} */
+
+.wrap {}
+
+
+.default {
+    padding: 100px 0;
+}
+
+.default .title {
+    max-width: 1200px;
+    margin: 0 auto 24px auto;
+    padding: 0 15px;
+}
+
+.default .title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+}
+
+.default .title p {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.default .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.default .inner .img {
+    width: 100%;
+}
+
+/* header에는 색깔 x */
+.header {
+    z-index: 999;
+    background: #f9f9f9;
+    position: relative;
+}
+
+.header .header_inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    line-height: 100px;
+}
+
+.gnb>ul {
+    display: flex;
+    gap: 30px;
+}
+
+/* 반응형 style 태그 */
+@media(max-width:768px) {
+    .header.on {
+        height: 100px;
+    }
+
+
+    h1.on {
+        position: fixed;
+        z-index: 999;
+    }
+
+    .gnb {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: calc(100% - 90px);
+        height: 100%;
+        background: #f9f9f9;
+        padding: 120px 15px 0 15px;
+        border-right: 1px solid #ddd;
+        transition: left 0.5s;
+    }
+
+    .gnb.on {
+        left: 0;
+    }
+
+
+    .gnb>ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        line-height: 40px;
+    }
+
+    .gnb>ul a {
+        display: block;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+
+.mbt {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .mbt {
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+    }
+}
+
+
+.main_visual {
+    background: #333;
+}
+
+.main_slide {
+    position: relative;
+    height: 100vh;
+}
+
+.main_event {
+    padding: 100px 0;
+}
+
+
+
+
+
+/* 가운데 오게 하는것 */
+.main_slide .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f9f9f9;
+
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.main_event .content {
+    display: flex;
+    gap: 30px;
+}
+
+.main_event .content>* {
+    flex: 1;
+}
+
+@media (max-width:768px) {
+    .main_event .content {
+        flex-direction: column;
+    }
+}
+
+.main_content {
+    background: #f9f9f9;
+}
+
+.main_content .content {
+    display: flex;
+    gap: 30px;
+}
+
+.main_content .content>* {
+    flex: 1;
+}
+
+@media (max-width:768px) {
+    .main_content .content {
+        flex-direction: column;
+    }
+}
+
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
